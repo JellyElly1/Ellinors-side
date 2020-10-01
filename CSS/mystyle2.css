@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Definerer main taggen. Det vil si hvordan gridsene skal oppføre seg på overordnet nivå*/
+.main {
+    display: grid; /* Definerer at sidene skal vises med grids*/
+	/* grid-column-gap: 15px; mellomrom mellom gridsene horisontalt*/
+	grid-row-gap: 5px;  /*mellomrom mellom gridsene vertikaltt*/
+	text-align: center; /* all teks skal midtstilles som standard*/
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* deler skjermen i 5 like store deler - horisontalt */
+}
+
+.header {
+    background-color:rgb(131, 182, 146); /*Green top line;header*/
+  width:100%;
+  display: grid;
+  grid-column: 1/6;
+  }
+
+body {
+
+    background-color:rgb(216, 130, 157); /*color of backgroud on main page*/
+    }
+
+    img {/*style of image*/
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 25%;
+        height: auto;
+        border-style: solid;
+        border-color: rgb(218, 132, 159);
+    }
+
+    .dropbtn { /*style of dropdown buttons*/
+        background-color: rgb(131, 182, 146);
+        color: rgb(5, 5, 5);
+        padding: 16px;
+        border-block-color: black;
+        min-width: 130px;
+        float: right;
+        }
+      
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 130px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            height: auto;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        float: right;
+      }
+      
+      .dropdown-content a:hover {background-color: #ddd;}
+      
+      .dropdown:hover .dropdown-content {display: block;}
+      
+      .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+      
+      
+      .Bildekarusell /* Navnet på classen */
+      {
+      animation-name: example; /* Navnet på animasjonen*/
+      animation-duration: 20s; /* Hvor lenge skal den vare, før den gjentar seg selv */
+      animation-iteration-count: infinite; /* Hvor mange ganger skal den gjentas? - Her uendelig */
+      grid-column: 2/6; /* Hvor mange grid kolonner som skal brukes */
+      min-height: 700px; /* Minimumshøyde på classen */
+      border-radius: 25px; /*Avrunnede hjørner */
+      margin-left: 15px; /* Hvor langt fra kanten classen skal være*/
+      }
+      
+      
+      @keyframes example /* nøkkelbilder/keyframes som skal brukes i animasjonen ved navn example */ 
+      {
+      20%   {background-image: url(../Photos/Bildeserie/Bildeserie_bilde1-2..png);}
+      50%  {background-image: url(../Photos/Bildeserie/Bildeserie_bilde2.png);}
+      75%   {background-image: url(../Photos/Bildeserie/Bildeserie_bilde3.png);}
+      100%  {background-image: url(../Photos/Bildeserie/Bildeserie_bilde4.png);}
+      }
+      
+      

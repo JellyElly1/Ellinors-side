@@ -111,3 +111,30 @@ img { /*style of image*/
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+
+.Bildekarusell /* Navnet på classen */
+{
+animation-name: Bildeserie; /* Navnet på animasjonen*/
+animation-duration: 30s; /* Hvor lenge skal den vare, før den gjentar seg selv */
+animation-iteration-count: infinite; /* Hvor mange ganger skal den gjentas? - Her uendelig */
+grid-column: 2/6; /* Hvor mange grid kolonner som skal brukes */
+min-height: 300px; /* Minimumshøyde på classen */
+border-radius: 25px; /*Avrunnede hjørner */
+margin-left: 15px; /* Hvor langt fra kanten classen skal være*/
+}
+
+/*.Bildekarusell:hover /* Hva skal skej når en har musepekeren over animasjonen (classen) 
+{
+width: 1200px; /* Ny bredde
+height: 700px; /* Ny høyde
+} */
+
+@keyframes example /* nøkkelbilder/keyframes som skal brukes i animasjonen ved navn example */ 
+{
+25%   {background-image: url(../Photos/Bildeserie/Bildeserie_bilde1-2..png);}
+50%  {background-image: url(../Photos/Bildeserie/Bildeserie_bilde2.png);}
+75%   {background-image: url(../Photos/Bildeserie/Bildeserie_bilde3.png);}
+100%  {background-image: url(../Photos/Bildeserie/Bildeserie_bilde4.png);}
+}
